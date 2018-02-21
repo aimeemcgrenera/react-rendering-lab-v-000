@@ -25,17 +25,19 @@ class Animation extends React.Component {
       );
   };
 
+  componentWillUpdate(nextProps, nextState){
+    if (nextState.open == true && this.state.open == false) {
+      this.showLoadingBar();
+    }
+  }
+
   showLoadingBar = () => {
     const progressBar = document.getElementById("progress-bar");
     progressBar.className = "off on";
     setTimeout(() => (progressBar.className = "off"), 1100);
   };
 
-  componentWillUpdate(nextProps, nextState){
-    if (nextState.open == true && this.state.open == false) {
-      this.showLoadingBar();
-    }
-  }
+
 
   render() {
     return (

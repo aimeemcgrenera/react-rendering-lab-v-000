@@ -35,7 +35,6 @@ class Animation extends React.Component {
     this.showLoadingBar()
   }
 
-
   render() {
     return (
       <div>

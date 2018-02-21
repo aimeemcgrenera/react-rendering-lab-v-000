@@ -33,8 +33,8 @@ class Animation extends React.Component {
 
   componentWillUpdate(nextProps, nextState){
     if (nextState.open == true && this.state.open == false) {
-    this.props.showLoadingBar();
-  }
+      this.props.showLoadingBar();
+    }
   }
 
   render() {
